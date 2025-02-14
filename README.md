@@ -11,7 +11,10 @@ mv ~/.config/tmux ~/.config/tmux.bak
 ## To use this
 
 ```
-git clone https://github.com/nimishgj/dotfiles ~/.config
+git clone https://github.com/nimishgj/dotfiles ~/dotfiles-temp
+cp -r ~/dotfiles-temp/* ~/.config/
+rm -rf ~/dotfiles-temp
+
 ```
 
 ## Next steps
