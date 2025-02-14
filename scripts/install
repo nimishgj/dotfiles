@@ -1,0 +1,18 @@
+#!/bin/sh
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# brew install
+
+brew install git
+brew install neovim
+brew install tmux
+brew install vi
+brew install openjdk
+brew install node
+brew install pre-commit
+brew install ripgrep
+brew install gh
+brew install fzf
+brew install font-jetbrains-mono-nerd-font
+

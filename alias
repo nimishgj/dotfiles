@@ -1,0 +1,34 @@
+# git aliases
+
+alias gpo='git push origin $(git branch --show-current)'
+alias gpr='git pull origin $(git branch --show-current) --rebase'
+alias gcd='git checkout .'
+alias gst='git status'
+alias gcim='git commit -m'
+alias status='git status'
+alias checkout='git checkout .'
+alias pull='git pull origin $(git branch --show-current) --rebase'
+alias push='git push origin $(git branch --show-current)'
+alias log='git log'
+alias add='git add'
+alias commit='git commit -m'
+
+# docker aliases
+alias dps='docker ps'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+alias drmi='docker rmi'
+alias dexec='docker exec -it'
+
+# common aliases
+alias reload='source ~/.zshrc'
+alias q='exit'
+alias .='cd ..'
+alias ..='cd ../..'
+
+# tmux aliases
+alias nts='tmux new -s'
+alias ta='tmux attach -t'
+alias tc='tmux new -s core'
+alias tu='tmux new -s ui'
+alias ti='tmux new -s infraspec'
