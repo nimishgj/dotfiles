@@ -5,5 +5,11 @@ ZSHRC_FILE="$HOME/.zshrc"
 
 echo "source $ALIAS_FILE" >>"$ZSHRC_FILE"
 echo "export QUTE_CONFIG_DIR=~/.config/qutebrowser"
+mv ~/.vim ~/.vim.bak
+mv ~/.vimrc ~/.vimrc.bak
 mv ~/.zshrc ~/.zshrc.bak
+mv ~/.qutebrowser/config.py ~/.qutebrowser/config.py.bak
 mv ../.zshrc ~/.zshrc
+mv ../vim/.vimrc ~/.vimrc
+mv ../vim/.vim ~/.vim
+mv ../qutebrowser/config.py ~/.qutebrowser/config.py
