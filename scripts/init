@@ -5,3 +5,5 @@ ZSHRC_FILE="$HOME/.zshrc"
 
 echo "source $ALIAS_FILE" >>"$ZSHRC_FILE"
 echo "export QUTE_CONFIG_DIR=~/.config/qutebrowser"
+mv ~/.zshrc ~/.zshrc.bak
+mv ../.zshrc ~/.zshrc
