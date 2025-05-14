@@ -149,4 +149,11 @@ alias k=kubectl
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export QUTE_CONFIG_DIR=~/.config/qutebrowser
+alias vi=nvim
+
+export PATH=$PATH:/Users/nimishgj/.cargo/bin
+alias ff="find . -type f | fzf"
+
+export FZF_DEFAULT_OPTS="--bind 'ctrl-y:execute-silent(echo -n {} | pbcopy)'"
+
+conda deactivate
