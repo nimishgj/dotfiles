@@ -5,17 +5,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'MattesGroeger/vim-bookmarks'
-
+Plug 'vuciv/golf'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " Basic settings (optional but useful)
 set number              " Show line numbers
-set relativenumber      " Relative line numbers
-set hidden              " Allow switching buffers without saving
-set ignorecase          " Case-insensitive search
-set smartcase           " ... unless uppercase used
-set clipboard=unnamedplus
-
 " fzf.vim mappings
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
@@ -32,3 +27,10 @@ let g:bookmark_auto_save = 1
 let g:bookmark_auto_close = 1
 let g:bookmark_save_per_working_dir = 1
 let g:bookmark_manage_per_buffer = 1
+set pastetoggle=\p
+
+
+" Keymaps
+inorema jj <Esc>
+
+inorema <leader>w :NERDTreeToggle<CR>
