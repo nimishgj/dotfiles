@@ -15,4 +15,12 @@ brew install ripgrep
 brew install gh
 brew install fzf
 brew install font-jetbrains-mono-nerd-font
-
+brew install yq
+brew install eksctl
+brew install gtypist
+brew install kubectx
+brew install lazygit
+brew install lazydocker
+brew install bat
+brew install nvm
+brew install tree
