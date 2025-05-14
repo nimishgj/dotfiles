@@ -11,6 +11,7 @@ alias pull='git pull origin $(git branch --show-current) --rebase'
 alias push='git push origin $(git branch --show-current)'
 alias log='git log'
 alias add='git add'
+alias gap='git add -p'
 alias commit='git commit -m'
 
 # docker aliases
@@ -25,6 +26,7 @@ alias reload='source ~/.zshrc'
 alias q='exit'
 alias .='cd ..'
 alias ..='cd ../..'
+alias ff="find . -type f | fzf"
 
 # tmux aliases
 alias nts='tmux new -s'
