@@ -15,3 +15,4 @@ mv ../vim/.vim ~/.vim
 mv ../qutebrowser/config.py ~/.qutebrowser/config.py
 mv ~/.gitconfig ~/.gitconfig.bak
 ln -sf ~/.config/git/config ~/.gitconfig
+git config --global commit.template ~/.config/git/template
