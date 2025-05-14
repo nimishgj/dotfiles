@@ -1,0 +1,173 @@
+tap "derailed/k9s"
+tap "weaveworks/tap"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# YAML Parser
+brew "libyaml"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# TUI todo manager
+brew "dooit"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# GNU multiple precision arithmetic library
+brew "gmp"
+# GNU typing tutor
+brew "gnu-typist"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Like cURL, but for gRPC
+brew "grpcurl"
+# Toolkit for creating graphical user interfaces
+brew "gtk+3"
+# Kubernetes package manager
+brew "helm"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Tool to move from `docker-compose` to Kubernetes
+brew "kompose"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Postgres C API library
+brew "libpq"
+# Platform built on V8 to build network applications
+brew "node"
+# CLI for Node.js style checker and lint tool for Markdown files
+brew "markdownlint-cli"
+# Java-based project management
+brew "maven"
+# Run a Kubernetes cluster locally
+brew "minikube"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
+# Manage multiple Node.js versions
+brew "nvm"
+# Tool for sending events from shell scripts & similar environments
+brew "otel-cli"
+# Object-relational database system
+brew "postgresql@14"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Easily download, build, install, upgrade, and uninstall Python packages
+brew "python-setuptools"
+# Ruby version manager
+brew "rbenv"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
+# Process Control System
+brew "supervisor"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
+# User interface to the TELNET protocol
+brew "telnet"
+# Tool to build, change, and version infrastructure
+brew "terraform"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Watch files and take action when they change
+brew "watchman"
+# Internet file retriever
+brew "wget"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "derailed/k9s/k9s"
+# The official CLI for Amazon EKS
+brew "weaveworks/tap/eksctl"
+cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+# Keyboard-driven, vim-like browser based on PyQt5
+cask "qutebrowser"
+# OpenJDK distribution from Azul
+cask "zulu@17"
+vscode "4ops.packer"
+vscode "4ops.terraform"
+vscode "akamud.vscode-theme-onedark"
+vscode "akcodeworks.actual-react-emmet"
+vscode "aliariff.vscode-erb-beautify"
+vscode "betajob.modulestf"
+vscode "blackboxapp.blackbox"
+vscode "carbonid1.emmet-jss"
+vscode "castwide.solargraph"
+vscode "chaitanyashahare.lazygit"
+vscode "cweijan.vscode-office"
+vscode "dart-code.dart-code"
+vscode "davidanson.vscode-markdownlint"
+vscode "dbaeumer.vscode-eslint"
+vscode "docker.docker"
+vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "elagil.pre-commit-helper"
+vscode "erd0s.terraform-autocomplete"
+vscode "esbenp.prettier-vscode"
+vscode "figma.figma-vscode-extension"
+vscode "firsttris.vscode-jest-runner"
+vscode "formulahendry.code-runner"
+vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.vscode-github-actions"
+vscode "grapecity.gc-excelviewer"
+vscode "hashicorp.terraform"
+vscode "jnbt.vscode-rufo"
+vscode "juliencroain.markdown-viewer"
+vscode "mbessey.vscode-rufo"
+vscode "mongodb.mongodb-vscode"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-wsl"
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "patbenatar.advanced-new-file"
+vscode "pjmiravalle.terraform-advanced-syntax-highlighting"
+vscode "postman.postman-for-vscode"
+vscode "redhat.java"
+vscode "ritwickdey.liveserver"
+vscode "robole.file-bunny"
+vscode "seltonfiuza.terragrunt-easy-plan"
+vscode "shakram02.bash-beautify"
+vscode "shopify.ruby-lsp"
+vscode "suryanshmak.advanced-file"
+vscode "tabnine.tabnine-vscode"
+vscode "tesoro.schedoost"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vittorioromeo.expand-selection-to-scope"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscode-snippet.snippet"
+vscode "vscodevim.vim"
+vscode "wallabyjs.wallaby-vscode"
+vscode "xabikos.javascriptsnippets"
