@@ -1,0 +1,15 @@
+#!/bin/bash
+# Save this as `export-asdf-plugins.sh` or run directly
+
+PLUGIN_LIST="plugin-versions.txt"
+> "$PLUGIN_LIST" # Clear the file
+
+for plugin in $(asdf plugin list); do
+  versions=$(asdf list "$plugin" | sed 's/^[ \*]*//')
+  for version in $versions; do
+    echo "$plugin $version" >> "$PLUGIN_LIST"
+  done
+done
+
+echo "Exported to $PLUGIN_LIST"
+
