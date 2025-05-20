@@ -6,18 +6,20 @@ brew "asdf"
 brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
 # YAML Parser
 brew "libyaml"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # TUI todo manager
 brew "dooit"
+# GNU multiple precision arithmetic library
+brew "gmp"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
-# GNU multiple precision arithmetic library
-brew "gmp"
 # GNU typing tutor
 brew "gnu-typist"
 # Open source programming language to build simple/reliable/efficient software
@@ -26,6 +28,8 @@ brew "go"
 brew "grpcurl"
 # Toolkit for creating graphical user interfaces
 brew "gtk+3"
+# Development framework for multimedia applications
+brew "gstreamer"
 # Kubernetes package manager
 brew "helm"
 # Lightweight and flexible command-line JSON processor
@@ -68,6 +72,8 @@ brew "rbenv"
 brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Process Control System
 brew "supervisor"
 # Easiest, most secure way to use WireGuard and 2FA
