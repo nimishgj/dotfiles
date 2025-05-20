@@ -1,0 +1,7 @@
+# common aliases
+alias reload='source ~/.zshrc'
+alias q='exit'
+alias ff="find . -type f | fzf"
+alias k=kubectl
+alias kctx=kubectx
+
