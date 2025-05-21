@@ -17,4 +17,6 @@
 [submodule ".config/tmux/plugins/vim-tmux-navigator"]
 	    path = .config/tmux/plugins/vim-tmux-navigator
 	        url = https://github.com/christoomey/vim-tmux-navigator
-
+[submodule ".config/alacritty/themes"]
+	    path = .config/alacritty/themes
+	        url = https://github.com/alacritty/alacritty-theme

@@ -52,4 +52,7 @@ export FZF_DEFAULT_OPTS="--bind 'ctrl-y:execute-silent(echo -n {} | pbcopy)'"
 conda deactivate
 
 export PATH="$HOME/.asdf/shims:$PATH"
-
+setopt share_history
+setopt hist_ignore_dups
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
