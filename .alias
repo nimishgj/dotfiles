@@ -5,3 +5,10 @@ alias ff="find . -type f | fzf"
 alias k=kubectl
 alias kctx=kubectx
 
+alias work='cd ~/github/work'
+
+alias base14='cd ~/github/work/infraspec/clients/base14'
+alias quintype='cd ~/github/work/infraspec/clients/base14/clients/quintype'
+alias dpd0='cd ~/github/work/infraspec/clients/base14/clients/dpd0'
+alias kulu='cd ~/github/work/infraspec/clients/base14/clients/kulu'
+alias infraspec='cd ~/github/work/infraspec'

@@ -56,3 +56,12 @@ setopt share_history
 setopt hist_ignore_dups
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/.p10k.zsh.
+[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/catppuccin-mocha.zsh.
+[[ ! -f ~/.config/zsh/catppuccin-mocha.zsh ]] || source ~/.config/zsh/catppuccin-mocha.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/.config/zsh/catppuccin-mocha.zsh.
+[[ ! -f ~/dotfiles/.config/zsh/catppuccin-mocha.zsh ]] || source ~/dotfiles/.config/zsh/catppuccin-mocha.zsh
