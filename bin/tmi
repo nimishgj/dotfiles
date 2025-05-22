@@ -1,0 +1,62 @@
+#!/bin/bash
+
+set -e
+
+CONFIG_FILE="${HOME}/.config/.tmi.conf"
+
+# Check for yq
+if ! command -v yq >/dev/null 2>&1; then
+  echo "❌ 'yq' is not installed. Please install it from https://github.com/mikefarah/yq"
+  exit 1
+fi
+
+# Accept -f flag for config file
+while getopts "f:" opt; do
+  case $opt in
+    f) CONFIG_FILE="$OPTARG" ;;
+    *) echo "Usage: $0 [-f config_file]"; exit 1 ;;
+  esac
+done
+
+if [[ ! -f "$CONFIG_FILE" ]]; then
+  echo "❌ Config file not found: $CONFIG_FILE"
+  exit 1
+fi
+
+# Iterate over sessions
+yq eval '.session[]' "$CONFIG_FILE" | yq eval 'keys' - | sed 's/- //' | while read -r session_name; do
+  echo "📦 Creating session: $session_name"
+
+  tmux has-session -t "$session_name" 2>/dev/null || tmux new-session -d -s "$session_name" -n dummy
+
+  # For each window in session
+  window_count=$(yq eval ".session[] | select(has(\"$session_name\")) | .$session_name.windows | length" "$CONFIG_FILE")
+  for ((i = 0; i < window_count; i++)); do
+    window_name=$(yq eval ".session[] | select(has(\"$session_name\")) | .$session_name.windows[$i] | keys | .[0]" "$CONFIG_FILE")
+    echo " 🪟 Creating window: $window_name"
+
+    tmux new-window -t "$session_name" -n "$window_name"
+
+    # Get command(s)
+    cmd_type=$(yq eval ".session[] | select(has(\"$session_name\")) | .$session_name.windows[$i].$window_name.cmd | type" "$CONFIG_FILE")
+
+    if [[ "$cmd_type" == "!!str" ]]; then
+      cmd=$(yq eval ".session[] | select(has(\"$session_name\")) | .$session_name.windows[$i].$window_name.cmd" "$CONFIG_FILE")
+      tmux send-keys -t "$session_name:$window_name" "$cmd" C-m
+    elif [[ "$cmd_type" == "!!seq" ]]; then
+      cmd_len=$(yq eval ".session[] | select(has(\"$session_name\")) | .$session_name.windows[$i].$window_name.cmd | length" "$CONFIG_FILE")
+      for ((j = 0; j < cmd_len; j++)); do
+        cmd=$(yq eval ".session[] | select(has(\"$session_name\")) | .$session_name.windows[$i].$window_name.cmd[$j]" "$CONFIG_FILE")
+        tmux send-keys -t "$session_name:$window_name" "$cmd" C-m
+      done
+    fi
+  done
+
+  # Remove dummy window if it still exists
+  if tmux list-windows -t "$session_name" | grep -q "dummy"; then
+    tmux kill-window -t "$session_name:dummy"
+  fi
+done
+
+echo "✅ Finished processing configuration."
+

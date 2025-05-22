@@ -1,0 +1,27 @@
+#!/bin/bash
+
+HISTORY_FILE="$HOME/.clipboard/history.json"
+
+# No ID passed: show all entries
+if [ -z "$1" ]; then
+  jq -r '
+    .[] | 
+    "\(.id) \(
+      if (.clipboard_value | test("\\n")) 
+      then (.clipboard_value | split("\n")[0] + "...") 
+      else .clipboard_value 
+      end
+    )"
+  ' "$HISTORY_FILE"
+  exit 0
+fi
+
+# ID passed: copy entry with that ID back to clipboard
+ENTRY=$(jq -r --arg id "$1" '.[] | select(.id == ($id | tonumber)) | .clipboard_value' "$HISTORY_FILE")
+
+if [ -n "$ENTRY" ]; then
+  echo "$ENTRY" | pbcopy
+  echo "Copied entry with ID $1 to clipboard."
+else
+  echo "No entry found with ID: $1"
+fi
