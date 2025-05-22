@@ -14,3 +14,6 @@ stow --adopt -v -R -t  ~ qutebrowser
 stow --adopt -v -R -t  ~ asdf
 stow --adopt -v -R -t  ~ brew
 stow --adopt -v -R -t  ~ zsh
+
+chmod +x defaults/run.sh
+./defaults/run.sh
