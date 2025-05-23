@@ -82,6 +82,8 @@ brew "tailscale"
 brew "telnet"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -104,8 +106,12 @@ brew "zsh"
 brew "derailed/k9s/k9s"
 # The official CLI for Amazon EKS
 brew "weaveworks/tap/eksctl"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Keyboard-driven, vim-like browser based on PyQt5
@@ -148,6 +154,7 @@ vscode "mongodb.mongodb-vscode"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
