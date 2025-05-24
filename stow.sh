@@ -2,10 +2,11 @@
 
 mkdir -v -p ~/.config
 mkdir -v -p ~/bin
+mkdir -v -p ~/.config/{tmux,ghostty,nvim}
 
-stow --adopt -v -R -t  ~/.config/ tmux
-stow --adopt -v -R -t  ~/.config/ ghostty
-stow --adopt -v -R -t  ~/.config/ nvim
+stow --adopt -v -R -t  ~/.config/tmux tmux
+stow --adopt -v -R -t  ~/.config/ghostty ghostty
+stow --adopt -v -R -t  ~/.config/nvim nvim
 stow --adopt -v -R -t  ~ vim
 stow --adopt -v -R -t  ~ git
 stow --adopt -v -R -t  ~/bin bin
@@ -16,5 +17,3 @@ stow --adopt -v -R -t  ~ brew
 stow --adopt -v -R -t  ~ zsh
 stow --adopt -v -R -t  ~ skhdrc
 
-chmod +x defaults/run.sh
-./defaults/run.sh
