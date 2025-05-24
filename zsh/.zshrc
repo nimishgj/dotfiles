@@ -66,4 +66,6 @@ bindkey "^[[B" history-search-forward
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.config/zsh/catppuccin-mocha.zsh.
 [[ ! -f ~/dotfiles/.config/zsh/catppuccin-mocha.zsh ]] || source ~/dotfiles/.config/zsh/catppuccin-mocha.zsh
 eval $(thefuck --alias)
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
+export PATH="/run/current-system/sw/bin:$PATH"
