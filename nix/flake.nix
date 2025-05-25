@@ -35,6 +35,7 @@
         enable = true;
         brews = [
           "asdf"
+          "htop"
           "thefuck"
           "fzf"
           "openssl@3"

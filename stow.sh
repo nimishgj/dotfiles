@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 mkdir -v -p ~/{bin,nix,.config}
-mkdir -v -p ~/.config/{tmux,ghostty,nvim}
+mkdir -v -p ~/.config/{tmux,ghostty,nvim,home-manager}
 
 stow --adopt -v -R -t  ~/.config/tmux tmux
 stow --adopt -v -R -t  ~/.config/ghostty ghostty
 stow --adopt -v -R -t  ~/.config/nvim nvim
+stow --adopt -v -R -t  ~/.config/home-manager home-manager
 stow --adopt -v -R -t  ~ vim
 stow --adopt -v -R -t  ~ git
 stow --adopt -v -R -t  ~/bin bin
