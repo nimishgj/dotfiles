@@ -17,3 +17,4 @@ stow --adopt -v -R -t  ~ brew
 stow --adopt -v -R -t  ~ zsh
 stow --adopt -v -R -t  ~ skhdrc
 stow --adopt -v -R -t  ~/nix nix
+stow --adopt -v -R -t  ~ hammerspoon
