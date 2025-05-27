@@ -6,7 +6,7 @@ alias k=kubectl
 alias kctx=kubectx
 
 alias work='cd ~/github/work'
-
+alias se='ssh -i "nimisha-pms-testing.pem" ec2-user@ec2-3-109-146-170.ap-south-1.compute.amazonaws.com '
 alias base14='cd ~/github/work/infraspec/clients/base14'
 alias quintype='cd ~/github/work/infraspec/clients/base14/clients/quintype'
 alias dpd0='cd ~/github/work/infraspec/clients/base14/clients/dpd0'
