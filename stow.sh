@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -v -p ~/{bin,nix,.config}
+mkdir -v -p ~/{bin,nix,.config,.oh-my-zsh}
 mkdir -v -p ~/.config/{tmux,ghostty,nvim,home-manager}
 
 stow --adopt -v -R -t  ~/.config/tmux tmux
