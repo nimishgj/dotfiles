@@ -35,3 +35,7 @@
 [submodule "vim/.vim/plugged/vim-be-good"]
 	path = vim/.vim/plugged/vim-be-good
 	url = https://github.com/ThePrimeagen/vim-be-good.git
+[submodule "tmux/plugins/tmux"]
+    path = tmux/plugins/tmux
+    url = https://github.com/catppuccin/tmux
+
