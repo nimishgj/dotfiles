@@ -17,3 +17,21 @@
 [submodule "tmux/plugins/vim-tmux-navigator"]
 	    path = tmux/plugins/vim-tmux-navigator
 	        url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "vim/.vim/plugged/fzf"]
+	path = vim/.vim/plugged/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "vim/.vim/plugged/fzf.vim"]
+	path = vim/.vim/plugged/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/.vim/plugged/vim-bookmarks"]
+	path = vim/.vim/plugged/vim-bookmarks
+	url = https://github.com/MattesGroeger/vim-bookmarks
+[submodule "vim/.vim/plugged/golf"]
+	path = vim/.vim/plugged/golf
+	url = https://github.com/vuciv/golf
+[submodule "vim/.vim/plugged/nerdtree"]
+	path = vim/.vim/plugged/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "vim/.vim/plugged/vim-be-good"]
+	path = vim/.vim/plugged/vim-be-good
+	url = https://github.com/ThePrimeagen/vim-be-good.git
