@@ -58,3 +58,29 @@ hs.hotkey.bind({"ctrl", "cmd", "shift"}, "U", function()
     end
 end)
 
+-- ~/.hammerspoon/init.lua
+
+-- Generic function to toggle any application
+function toggleApp(appName)
+    return function()
+        local app = hs.application.find(appName)
+        
+        if app then
+            if app:isFrontmost() then
+                app:hide()
+            else
+                app:activate()
+            end
+        else
+            hs.application.launchOrFocus(appName)
+        end
+    end
+end
+
+-- Bind Cmd+Ctrl+G to open Ghostty
+hs.hotkey.bind({"cmd"}, "g", toggleApp("Ghostty"))
+hs.hotkey.bind({"cmd", "shift"}, "b", toggleApp("qutebrowser"))
+hs.hotkey.bind({"cmd"}, "m", toggleApp("Spotify"))
+
+-- Optional: Show a notification when Hammerspoon config is loaded
+hs.notify.new({title="Hammerspoon", informativeText="Config loaded! Cmd+Ctrl+G opens Ghostty"}):send()
