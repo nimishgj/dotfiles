@@ -69,3 +69,6 @@ eval $(thefuck --alias)
 . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
 export PATH="/run/current-system/sw/bin:$PATH"
+
+printf "\033[5 q"
+

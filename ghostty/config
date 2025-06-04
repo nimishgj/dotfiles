@@ -3,5 +3,4 @@ font-family = "JetBrainsMonoNL Nerd Font Mono"
 window-padding-x = 10
 window-decoration = none
 theme = catppuccin-macchiato
-keybind = cmd+w=unbind
-keybind = global:cmd+w=toggle_quick_terminal
+keybind = global:cmd+e=toggle_quick_terminal
