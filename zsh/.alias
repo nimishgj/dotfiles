@@ -4,7 +4,15 @@ alias q='exit'
 alias ff="find . -type f | fzf"
 alias k=kubectl
 alias kctx=kubectx
+
 alias f=fuck
+alias ls=la
+alias vd='vi .'
+alias v=vi
+alias nvd='nvim .'
+alias nv=nvim
+alias c=cat
+
 
 alias work='cd ~/github/work'
 alias se='ssh -i "nimisha-pms-testing.pem" ec2-user@ec2-3-109-146-170.ap-south-1.compute.amazonaws.com '
