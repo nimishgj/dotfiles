@@ -4,14 +4,221 @@ alias q='exit'
 alias ff="find . -type f | fzf"
 alias k=kubectl
 alias kctx=kubectx
+alias f=fuck
 
 alias work='cd ~/github/work'
 alias se='ssh -i "nimisha-pms-testing.pem" ec2-user@ec2-3-109-146-170.ap-south-1.compute.amazonaws.com '
-alias base14='cd ~/github/work/infraspec/clients/base14'
-alias quintype='cd ~/github/work/infraspec/clients/base14/clients/quintype'
-alias dpd0='cd ~/github/work/infraspec/clients/base14/clients/dpd0'
+alias base='cd ~/github/work/infraspec/clients/base14'
+alias qt='cd ~/github/work/infraspec/clients/base14/clients/quintype'
+alias dpd='cd ~/github/work/infraspec/clients/base14/clients/dpd0'
 alias kulu='cd ~/github/work/infraspec/clients/base14/clients/kulu'
 alias zinc='cd ~/github/work/infraspec/clients/base14/clients/zinc'
-alias pratilipi='cd ~/github/work/infraspec/clients/base14/clients/pratilipi'
-alias infraspec='cd ~/github/work/infraspec'
+alias plp='cd ~/github/work/infraspec/clients/base14/clients/pratilipi'
+alias is='cd ~/github/work/infraspec'
 alias personal='cd ~/github/personal'
+
+# git
+alias st='git status'
+
+# qutebrowser aliases
+bw() {
+  osascript <<EOF
+tell application "qutebrowser"
+  activate
+end tell
+
+do shell script "qutebrowser --target window https://docs.base14.io &"
+
+delay 1
+
+tell application "System Events"
+  tell process "qutebrowser"
+    keystroke "t" using {command down}
+    delay 0.5
+    keystroke ":" & "open -t github.com/base-14/"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t github.com/base-14/base14/"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t github.com/base-14/base14-infra/"
+    key code 36
+  end tell
+end tell
+EOF
+}
+
+qw() {
+  osascript <<EOF
+tell application "qutebrowser"
+  activate
+end tell
+
+do shell script "qutebrowser --target window https://github.com/quintype &"
+
+delay 1
+
+tell application "System Events"
+  tell process "qutebrowser"
+    keystroke "t" using {command down}
+    delay 0.5
+    keystroke ":" & "open -t https://play.base14.io/quintype/dashboards"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/quintype/d/oeicxwyw4thc0a/metrics-collected-v2"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/quintype/explore"
+    key code 36
+  end tell
+end tell
+EOF
+}
+
+gw() {
+  osascript <<EOF
+tell application "qutebrowser"
+  activate
+end tell
+
+do shell script "qutebrowser --target window https://chatgpt.com &"
+
+delay 1
+
+tell application "System Events"
+  tell process "qutebrowser"
+    keystroke "t" using {command down}
+    delay 0.5
+    keystroke ":" & "open -t https://play.base14.io/glomopay/dashboards"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/glomopay/d/metrics-collected-v2"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/glomopay/explore"
+    key code 36
+  end tell
+end tell
+EOF
+}
+
+zw() {
+  osascript <<EOF
+tell application "qutebrowser"
+  activate
+end tell
+
+do shell script "qutebrowser --target window https://chatgpt.com &"
+
+delay 1
+
+tell application "System Events"
+  tell process "qutebrowser"
+    keystroke "t" using {command down}
+    delay 0.5
+    keystroke ":" & "open -t https://play.base14.io/zinc/dashboards"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/zinc/d/metrics-collected-v2"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/zinc/explore"
+    key code 36
+  end tell
+end tell
+EOF
+}
+
+dw() {
+  osascript <<EOF
+tell application "qutebrowser"
+  activate
+end tell
+
+do shell script "qutebrowser --target window https://chatgpt.com &"
+
+delay 1
+
+tell application "System Events"
+  tell process "qutebrowser"
+    keystroke "t" using {command down}
+    delay 0.5
+    keystroke ":" & "open -t https://play.base14.io/dpd0/dashboards"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/dpd0/d/metrics-collected-v2"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/dpd0/explore"
+    key code 36
+  end tell
+end tell
+EOF
+}
+
+kw() {
+  osascript <<EOF
+tell application "qutebrowser"
+  activate
+end tell
+
+do shell script "qutebrowser --target window https://chatgpt.com &"
+
+delay 1
+
+tell application "System Events"
+  tell process "qutebrowser"
+    keystroke "t" using {command down}
+    delay 0.5
+    keystroke ":" & "open -t https://play.base14.io/kulu/dashboards"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/kulu/d/metrics-collected-v2"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://play.base14.io/kulu/explore"
+    key code 36
+  end tell
+end tell
+EOF
+}
+
+cw() {
+  osascript <<EOF
+tell application "qutebrowser"
+  activate
+end tell
+
+do shell script "qutebrowser --target window https://chatgpt.com &"
+
+delay 1
+
+tell application "System Events"
+  tell process "qutebrowser"
+    keystroke "t" using {command down}
+    delay 0.5
+    keystroke ":" & "open -t https://claude.ai"
+    key code 36
+    delay 0.5
+
+    keystroke ":" & "open -t https://gemini.google.com/app"
+    key code 36
+    delay 0.5
+
+  end tell
+end tell
+EOF
+}
+

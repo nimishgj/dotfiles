@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 mkdir -v -p ~/{bin,nix,.config,.oh-my-zsh}
-mkdir -v -p ~/.config/{tmux,ghostty,nvim,home-manager}
+mkdir -v -p ~/.config/{tmux,ghostty,nvim,home-manager,skhd,yabai}
 
 stow --adopt -v -R -t  ~/.config/tmux tmux
 stow --adopt -v -R -t  ~/.config/ghostty ghostty
@@ -15,6 +15,7 @@ stow --adopt -v -R -t  ~ qutebrowser
 stow --adopt -v -R -t  ~ asdf
 stow --adopt -v -R -t  ~ brew
 stow --adopt -v -R -t  ~ zsh
-stow --adopt -v -R -t  ~ skhdrc
+stow --adopt -v -R -t  ~/.config/skhd skhd
+stow --adopt -v -R -t  ~/.config/yabai yabai
 stow --adopt -v -R -t  ~/nix nix
 stow --adopt -v -R -t  ~ hammerspoon
