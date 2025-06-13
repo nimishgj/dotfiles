@@ -19,3 +19,6 @@ stow --adopt -v -R -t  ~/.config/skhd skhd
 stow --adopt -v -R -t  ~/.config/yabai yabai
 stow --adopt -v -R -t  ~/nix nix
 stow --adopt -v -R -t  ~ hammerspoon
+
+
+reload
