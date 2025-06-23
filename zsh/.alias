@@ -7,8 +7,9 @@ alias kctx=kubectx
 
 alias f=fuck
 alias ls=la
-alias vd='vi .'
-alias v=vi
+alias vi=nvim
+alias vd='nvim .'
+alias v=nvim
 alias nvd='nvim .'
 alias nv=nvim
 alias c=cat
@@ -25,6 +26,8 @@ alias zinc='cd ~/github/work/infraspec/clients/base14/clients/zinc'
 alias plp='cd ~/github/work/infraspec/clients/base14/clients/pratilipi'
 alias is='cd ~/github/work/infraspec'
 alias personal='cd ~/github/personal'
+
+alias dfiles='nvim ~/dotfiles'
 
 # git
 alias st='git status'
