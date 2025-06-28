@@ -66,7 +66,6 @@ bindkey "^[[B" history-search-forward
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/.config/zsh/catppuccin-mocha.zsh.
 [[ ! -f ~/dotfiles/.config/zsh/catppuccin-mocha.zsh ]] || source ~/dotfiles/.config/zsh/catppuccin-mocha.zsh
 eval $(thefuck --alias)
-. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
 export PATH="/run/current-system/sw/bin:$PATH"
 
@@ -87,3 +86,7 @@ setopt hist_save_no_dups        # Don't save duplicates in the history file
 setopt hist_find_no_dups        # Don't find duplicates during history search
 setopt hist_expire_dups_first   # Expire duplicate entries first when trimming history
 
+export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
