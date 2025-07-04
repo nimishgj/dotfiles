@@ -28,7 +28,9 @@ alias is='cd ~/github/work/infraspec'
 alias personal='cd ~/github/personal'
 
 alias dfiles='nvim ~/dotfiles'
-
+alias github='cd ~/github'
+alias otel='docker compose -f ~/github/apps/python/otel-learning/compose.yml.bak up -d'
+alias oteld='docker compose -f ~/github/apps/python/otel-learning/compose.yml.bak down'
 # git
 alias st='git status'
 
