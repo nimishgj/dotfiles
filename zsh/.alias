@@ -31,6 +31,9 @@ alias dfiles='nvim ~/dotfiles'
 alias github='cd ~/github'
 alias otel='docker compose -f ~/github/apps/python/otel-learning/compose.yml.bak up -d'
 alias oteld='docker compose -f ~/github/apps/python/otel-learning/compose.yml.bak down'
+alias otel-logs='~/github/temp/scripts/send_dummy_logs.sh'
+alias otel-traces='~/github/temp/scripts/send_dummy_traces.sh'
+alias otel-metrics='~/github/temp/scripts/send_dummy_metrics.sh'
 # git
 alias st='git status'
 
