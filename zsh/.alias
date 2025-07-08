@@ -37,6 +37,13 @@ alias otel-metrics='~/github/temp/scripts/send_dummy_metrics.sh'
 # git
 alias st='git status'
 
+alias mkd='minikube stop --profile=multi-node'
+# for fist time start use 'minikube start --nodes=4 --profile=multi-node'
+alias mk='minikube start --profile=multi-node'
+
+alias expose='function _expose(){ ngrok http "$1"; }; _expose'
+
+
 # qutebrowser aliases
 bw() {
   osascript <<EOF
