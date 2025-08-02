@@ -46,6 +46,7 @@ export PATH="/Users/nimishgj/.codeium/windsurf/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH=$PATH:/Users/nimishgj/.cargo/bin
+export PATH="$PATH:/Users/nimishgj/.config/jetbrains"
 
 export FZF_DEFAULT_OPTS="--bind 'ctrl-y:execute-silent(echo -n {} | pbcopy)'"
 
