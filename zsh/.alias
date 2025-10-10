@@ -4,6 +4,7 @@ alias q='exit'
 alias ff="find . -type f | fzf"
 alias k=kubectl
 alias kctx=kubectx
+alias d=podman
 
 alias f=fuck
 alias ls=la
@@ -14,7 +15,18 @@ alias nvd='nvim .'
 alias nv=nvim
 alias c=cat
 
+# Functions
+# That pbcopy alias
+cpc() {
+  if [ -t 0 ]; then
+    cat "$1" | pbcopy
+  else
+    pbcopy
+  fi
+}
 
+
+# this was before autojump was discovered
 alias work='cd ~/github/work'
 alias se='ssh -i "nimisha-pms-testing.pem" ec2-user@ec2-3-109-146-170.ap-south-1.compute.amazonaws.com '
 alias base='cd ~/github/work/infraspec/clients/base14'
@@ -29,8 +41,8 @@ alias personal='cd ~/github/personal'
 
 alias dfiles='nvim ~/dotfiles'
 alias github='cd ~/github'
-alias otel='docker compose -f ~/github/apps/python/otel-learning/compose.yml.bak up -d'
-alias oteld='docker compose -f ~/github/apps/python/otel-learning/compose.yml.bak down'
+alias otel='podman compose -f ~/github/apps/python/otel-learning/compose.yml.bak up -d'
+alias oteld='podman compose -f ~/github/apps/python/otel-learning/compose.yml.bak down'
 alias otel-logs='~/github/temp/scripts/send_dummy_logs.sh'
 alias otel-traces='~/github/temp/scripts/send_dummy_traces.sh'
 alias otel-metrics='~/github/temp/scripts/send_dummy_metrics.sh'

@@ -13,15 +13,7 @@ hs.hotkey.bind({"ctrl", "cmd"}, "U", function()
         {
             type = "rectangle",
             action = "fill",
-            fillColor = { red = 0, green = 0, blue = 0, alpha = 0.9 }
-        },
-        {
-            type = "text",
-            text = "🔒 Screen is Frozen",
-            textSize = 30,
-            textColor = { white = 1 },
-            frame = { x = "20%", y = "35%", w = "60%", h = "30%" },
-            textAlignment = "center"
+            fillColor = { red = 0, green = 0, blue = 0, alpha = 0.001 }
         }
     )
 
@@ -42,6 +34,21 @@ hs.hotkey.bind({"ctrl", "cmd"}, "U", function()
         return true -- block all other keys
     end)
 
+    blockMouseTap = hs.eventtap.new(
+            {
+                hs.eventtap.event.types.leftMouseDown,
+                hs.eventtap.event.types.leftMouseUp,
+                hs.eventtap.event.types.rightMouseDown,
+                hs.eventtap.event.types.rightMouseUp,
+                hs.eventtap.event.types.mouseMoved,
+                hs.eventtap.event.types.scrollWheel
+            },
+            function(event)
+                return true -- block everything
+            end
+        )
+    blockMouseTap:start()
+
     blockInputTap:start()
 end)
 
@@ -55,6 +62,11 @@ hs.hotkey.bind({"ctrl", "cmd", "shift"}, "U", function()
     if blockInputTap then
         blockInputTap:stop()
         blockInputTap = nil
+    end
+  
+    if blockMouseTap then
+        blockMouseTap:stop()
+        blockMouseTap = nil
     end
 end)
 

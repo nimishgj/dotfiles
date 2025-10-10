@@ -81,7 +81,7 @@
 [url "git@github.com:"]
     insteadOf = "gssh:"
 
-[url "https://github.com"]
+[url "https://github.com/"]
     insteadOf = "gh:"
 [filter "lfs"]
 	process = git-lfs filter-process

@@ -4,3 +4,4 @@ window-padding-x = 10
 window-decoration=none
 theme = "catppuccin-macchiato"
 keybind = global:cmd+e=toggle_quick_terminal
+keybind = shift+enter=text:\x1b\r
