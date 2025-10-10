@@ -53,7 +53,9 @@ alias st='git status'
 alias mkd='minikube stop --profile=multi-node'
 # for fist time start use 'minikube start --nodes=4 --profile=multi-node'
 alias mk='minikube start --profile=multi-node'
-
+alias serve='python3 -m http.server 8000'
+alias cn='echo "nodejs 24.2.0" > .tool-versions'
+alias rdir='rm -Rf'
 alias expose='function _expose(){ ngrok http "$1"; }; _expose'
 
 
