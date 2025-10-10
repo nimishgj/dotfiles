@@ -2,17 +2,54 @@
 
 HISTORY_FILE="$HOME/.clipboard/history.json"
 
-# No ID passed: show all entries
+# Check if fzf is installed
+if ! command -v fzf &> /dev/null; then
+  echo "Error: fzf is not installed. Install it with: brew install fzf"
+  exit 1
+fi
+
+# No ID passed: use fzf for interactive selection
 if [ -z "$1" ]; then
-  jq -r '
-    .[] | 
-    "\(.id) \(
-      if (.clipboard_value | test("\\n")) 
-      then (.clipboard_value | split("\n")[0] + "...") 
-      else .clipboard_value 
+  # Generate preview list with ID, timestamp, and content preview (reversed for recent first)
+  SELECTED=$(jq -r '
+    reverse | .[] |
+    "\(.id)|\(.timestamp)|\(
+      if (.clipboard_value | test("\\n"))
+      then (.clipboard_value | split("\n")[0] + "...")
+      else .clipboard_value
       end
     )"
-  ' "$HISTORY_FILE"
+  ' "$HISTORY_FILE" | \
+  fzf --delimiter="|" \
+      --with-nth=1,2,3 \
+      --preview='echo {}' \
+      --preview-window=up:3:wrap \
+      --prompt="Select clipboard entry: " \
+      --height=50% \
+      --layout=reverse \
+      --no-sort \
+      --bind='enter:accept' \
+      --header='Select entry to copy to clipboard (ESC to cancel)')
+
+  # Exit if nothing selected
+  if [ -z "$SELECTED" ]; then
+    exit 0
+  fi
+
+  # Extract ID from selection
+  SELECTED_ID=$(echo "$SELECTED" | cut -d'|' -f1)
+
+  # Copy the full entry to clipboard
+  ENTRY=$(jq -r --arg id "$SELECTED_ID" '.[] | select(.id == ($id | tonumber)) | .clipboard_value' "$HISTORY_FILE")
+
+  if [ -n "$ENTRY" ]; then
+    echo "$ENTRY" | pbcopy
+    echo "Copied entry with ID $SELECTED_ID to clipboard."
+  else
+    echo "Error: Could not find entry with ID: $SELECTED_ID"
+    exit 1
+  fi
+
   exit 0
 fi
 
