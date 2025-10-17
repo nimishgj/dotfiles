@@ -81,8 +81,21 @@
 [url "git@github.com:"]
     insteadOf = "gssh:"
 
+[url "https://github.com/nimishgj"]
+    insteadOf = "nimishgj:"
+
 [url "https://github.com/"]
     insteadOf = "gh:"
+
+[url "https://github.com/infraspecdev/"]
+    insteadOf = "ispec:"
+
+[url "https://github.com/base-14/"]
+    insteadOf = "b14:"
+
+[url "https://github.com/zinctutors/"]
+    insteadOf = "zinc:"
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
