@@ -48,6 +48,7 @@ alias otel-traces='~/github/temp/scripts/send_dummy_traces.sh'
 alias otel-metrics='~/github/temp/scripts/send_dummy_metrics.sh'
 alias dtracedown='docker rm -f tracex-grafana & docker rmi tracex-grafana'
 alias dlogdown='docker rm -f logx-grafana & docker rmi logx-grafana'
+alias dcup='docker compose up -d && docker compose logs -f'
 deck() {
   docker run --rm -v "$PWD":/files -w /files \
     -e DECK_KONG_ADDR="$1" \
