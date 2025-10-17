@@ -46,6 +46,15 @@ alias oteld='podman compose -f ~/github/apps/python/otel-learning/compose.yml.ba
 alias otel-logs='~/github/temp/scripts/send_dummy_logs.sh'
 alias otel-traces='~/github/temp/scripts/send_dummy_traces.sh'
 alias otel-metrics='~/github/temp/scripts/send_dummy_metrics.sh'
+alias dtracedown='docker rm -f tracex-grafana & docker rmi tracex-grafana'
+alias dlogdown='docker rm -f logx-grafana & docker rmi logx-grafana'
+deck() {
+  docker run --rm -v "$PWD":/files -w /files \
+    -e DECK_KONG_ADDR="$1" \
+    kong/deck gateway sync "$2"
+}
+
+
 # git
 alias st='git status'
 
@@ -57,7 +66,7 @@ alias serve='python3 -m http.server 8000'
 alias cn='echo "nodejs 24.2.0" > .tool-versions'
 alias rdir='rm -Rf'
 alias expose='function _expose(){ ngrok http "$1"; }; _expose'
-
+alias ik='export KUBECONFIG=~/github/personal/garage/kubernetes/talos/kubeconfig'
 
 # qutebrowser aliases
 bw() {
