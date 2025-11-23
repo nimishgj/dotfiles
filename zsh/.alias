@@ -56,6 +56,9 @@ deck() {
 }
 
 
+# helm
+alias hls='helm ls --all-namespaces'
+
 # git
 alias st='git status'
 

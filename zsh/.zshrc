@@ -7,7 +7,7 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions docker docker-compose tmux asdf node terraform)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions docker docker-compose tmux asdf node terraform kubectl)
 
 # Source files
 source $ZSH/oh-my-zsh.sh
@@ -97,3 +97,9 @@ export KUBECONFIG=~/.kube/office-config
 
         autoload -U compinit && compinit -u
 export PATH="/opt/homebrew/opt/erlang@27/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/nimishgj/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/nimishgj/.antigravity/antigravity/bin:$PATH"
