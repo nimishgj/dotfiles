@@ -95,11 +95,8 @@ set rtp+=/opt/homebrew/opt/fzf
 export KUBECONFIG=~/.kube/office-config
         [[ -s /Users/nimishgj/.autojump/etc/profile.d/autojump.sh ]] && source /Users/nimishgj/.autojump/etc/profile.d/autojump.sh
 
-        autoload -U compinit && compinit -u
 export PATH="/opt/homebrew/opt/erlang@27/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/nimishgj/.antigravity/antigravity/bin:$PATH"
 
-# Added by Antigravity
-export PATH="/Users/nimishgj/.antigravity/antigravity/bin:$PATH"

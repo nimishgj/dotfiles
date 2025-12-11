@@ -8,9 +8,9 @@ alias d=podman
 
 alias f=fuck
 alias ls=la
-alias vi=nvim
+alias n=nvim
 alias vd='nvim .'
-alias v=nvim
+alias v=vim
 alias nvd='nvim .'
 alias nv=nvim
 alias c=cat
@@ -46,8 +46,8 @@ alias oteld='podman compose -f ~/github/apps/python/otel-learning/compose.yml.ba
 alias otel-logs='~/github/temp/scripts/send_dummy_logs.sh'
 alias otel-traces='~/github/temp/scripts/send_dummy_traces.sh'
 alias otel-metrics='~/github/temp/scripts/send_dummy_metrics.sh'
-alias dtracedown='docker rm -f tracex-grafana & docker rmi tracex-grafana'
-alias dlogdown='docker rm -f logx-grafana & docker rmi logx-grafana'
+alias dtd='docker rm -f tracex-grafana & docker rmi tracex-grafana'
+alias dld='docker rm -f logx-grafana & docker rmi logx-grafana'
 alias dcup='docker compose up -d && docker compose logs -f'
 deck() {
   docker run --rm -v "$PWD":/files -w /files \
@@ -60,7 +60,11 @@ deck() {
 alias hls='helm ls --all-namespaces'
 
 # git
-alias st='git status'
+alias st='git status .'
+alias stu='git status . | grep "^??."'
+alias stA='git status . | grep "^A."'
+alias o='git open'
+alias a='git add -p'
 
 # minikube stuff
 alias mkd='minikube stop --profile=multi-node'

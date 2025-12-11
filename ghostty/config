@@ -1,6 +1,6 @@
 font-size = 18
 font-family = "JetBrainsMonoNL Nerd Font Mono"
 window-padding-x = 10
-theme = "catppuccin-macchiato"
+theme =  3024 Night 
 keybind = global:cmd+e=toggle_quick_terminal
 keybind = shift+enter=text:\x1b\r
