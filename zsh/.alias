@@ -5,6 +5,8 @@ alias ff="find . -type f | fzf"
 alias k=kubectl
 alias kctx=kubectx
 alias d=podman
+alias regex='grep -E'
+alias z=zed
 
 alias f=fuck
 alias ls=la
@@ -65,6 +67,7 @@ alias stu='git status . | grep "^??."'
 alias stA='git status . | grep "^A."'
 alias o='git open'
 alias a='git add -p'
+alias msg='git commit -m'
 
 # minikube stuff
 alias mkd='minikube stop --profile=multi-node'
