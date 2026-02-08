@@ -20,8 +20,32 @@ source ~/.local.zshrc
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+<<<<<<< HEAD
 
 # PATH vars
+=======
+# Conda setup
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+
+# PATH vars
+export PATH="$HOME/.rbenv/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export GOROOT="$(brew --prefix go)/libexec"
+export PATH="/Users/nimishgj/.codeium/windsurf/bin:$PATH"
+>>>>>>> 6387d3b (some more configs)
 export PATH="$HOME/bin:$PATH"
 
 export FZF_DEFAULT_OPTS="--bind 'ctrl-y:execute-silent(echo -n {} | pbcopy)'"
@@ -59,3 +83,10 @@ setopt hist_save_no_dups        # Don't save duplicates in the history file
 setopt hist_find_no_dups        # Don't find duplicates during history search
 setopt hist_expire_dups_first   # Expire duplicate entries first when trimming history
 
+set rtp+=/opt/homebrew/opt/fzf
+[[ -s /Users/nimishgj/.autojump/etc/profile.d/autojump.sh ]] && source /Users/nimishgj/.autojump/etc/profile.d/autojump.sh
+
+
+
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+export PATH="$HOME/.local/bin:$PATH"

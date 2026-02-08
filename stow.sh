@@ -28,6 +28,7 @@ stow --adopt -v -R -t  ~/.config/tmux tmux
 stow --adopt -v -R -t  ~/.config/ghostty ghostty
 stow --adopt -v -R -t  ~/.config/nvim nvim
 stow --adopt -v -R -t  ~/.config/home-manager home-manager
+stow --adopt -v -R -t ~/.config/zed zed
 stow --adopt -v -R -t  ~ vim
 stow --adopt -v -R -t  ~ git
 stow --adopt -v -R -t  ~/bin bin

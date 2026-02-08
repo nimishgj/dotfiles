@@ -16,6 +16,7 @@ alias v=vim
 alias nvd='nvim .'
 alias nv=nvim
 alias c=cat
+alias h='ssh -t hetzner tmux a'
 
 # Functions
 # That pbcopy alias
